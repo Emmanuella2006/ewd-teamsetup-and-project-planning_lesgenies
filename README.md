@@ -39,4 +39,6 @@ https://github.com/users/Emmanuella2006/projects/2/views/1
 
 ## Architecture Diagram
 This is the link to our architecture diagram; https://miro.com/app/board/uXjVHVg6t7c=/
+<img width="1780" height="865" alt="image" src="https://github.com/user-attachments/assets/737d3bae-a5c0-444d-ae57-3d06a6dfb418" />
+
 

@@ -43,13 +43,15 @@ This is the link to our architecture diagram; https://miro.com/app/board/uXjVHVg
 
 **Database Desig and implementationn**
 Database Overview
-Building on the Week 1 setup, Week 2 focuses on designing and implementing the relational database that stores all MoMo transaction data. The schema was derived directly from the MoMo XML structure and covers five entities: Users, Transactions, Transaction_Categories, User_Permission, and System_Log.
+Building on the team setup and project planning, the database design and implementation focuses on designing and implementing the relational database that stores all MoMo transaction data. The schema was derived directly from the MoMo XML structure and covers five entities: Users, Transactions, Transaction_Categories, User_Permission, and System_Log.
 
-Entity Relationship Diagram
+**Entity Relationship Diagram**
 The full ERD is available at docs/erd_diagram.png.
 The diagram uses crow's foot notation and clearly marks all primary keys (PK), foreign keys (FK), and relationship cardinalities.
+<img width="847" height="724" alt="image" src="https://github.com/user-attachments/assets/4710ba00-ee1c-4fe8-8a51-6876fc90994e" />
 
-Database Schema
+
+**Database Schema**
 The schema includes the following tables:
 -Users — stores sender and receiver information (name, phone number, account balance)
 -Transactions — the central table linking users, categories, amounts, timestamps, and raw SMS data
@@ -57,8 +59,8 @@ The schema includes the following tables:
 -User_Permission — junction table resolving the many-to-many relationship between Users and Transaction_Categories
 -System_Log — audit trail for XML ingestion events per transaction
 
-SQL Setup
+**SQL Setup**
 The full setup script is at database/database_setup.sql. It includes DDL statements for all tables, foreign key constraints, indexes, and sample data.
 
-JSON Examples
+**JSON Examples**
 JSON schemas for all entities are at examples/json_schemas.json, showing how relational data is serialized for API responses.

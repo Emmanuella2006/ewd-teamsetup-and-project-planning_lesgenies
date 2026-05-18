@@ -39,10 +39,12 @@ https://github.com/users/Emmanuella2006/projects/2/views/1
 
 ## Architecture Diagram
 This is the link to our architecture diagram; https://miro.com/app/board/uXjVHVg6t7c=/
-<img width="807" height="708" alt="image" src="https://github.com/user-attachments/assets/fe486eaf-8c70-48a3-b60d-125233774387" />
+<img width="1418" height="702" alt="image" src="https://github.com/user-attachments/assets/11edecbf-ffa3-4190-b431-b34543878b5b" />
 
 
-**Database Desig and implementationn**
+
+**Database Design and implementationn**
+
 Database Overview
 Building on the team setup and project planning, the database design and implementation focuses on designing and implementing the relational database that stores all MoMo transaction data. The schema was derived directly from the MoMo XML structure and covers five entities: Users, Transactions, Transaction_Categories, User_Permission, and System_Log.
 
@@ -50,7 +52,8 @@ Building on the team setup and project planning, the database design and impleme
 The full ERD is available at docs/erd_diagram.png.
 The diagram was built using Miro and uses crow's foot notation to express cardinality. It clearly marks all primary keys (PK) and foreign keys (FK) across all five entities.
 
-<img width="847" height="724" alt="image" src="https://github.com/user-attachments/assets/4710ba00-ee1c-4fe8-8a51-6876fc90994e" 
+<img width="842" height="720" alt="image" src="https://github.com/user-attachments/assets/3c90e58c-276b-4e98-b595-aa358c468398" />
+
   
 Entities and what they represent:
 

@@ -53,3 +53,32 @@
       "statusCode": -1
     }
   },
+
+{
+    "transaction_id": "45434420466",
+    "amount": 10900.00,
+    "feeCharged": 0.00,
+    "transactionTime": "2024-05-12T13:26:13Z",
+    "rawSmsBody": "Your payment of 10,900 RWF to Jane Smith...",
+    "category": {
+      "categoryId": 2,
+      "categoryName": "Payment",
+      "categoryDescription": "Outgoing payments for goods/services"
+    },
+    "sender": {
+      "userId": 1,
+      "userFullName": "System Owner",
+      "phoneNumber": "+250788110381"
+    },
+    "receiver": {
+      "userId": 2,
+      "userFullName": "Jane Smith",
+      "phoneNumber": "+250788******013"
+    },
+    "systemLog": {
+      "serviceCenter": "+250788110381",
+      "protocolType": 0,
+      "statusCode": -1
+    }
+  }
+]

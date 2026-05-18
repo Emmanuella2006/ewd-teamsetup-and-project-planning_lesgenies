@@ -162,14 +162,14 @@
     }
   },
   {
-    "transaction_id": "45434420466",
+    "tran_id": "45434420466",
     "amount": 10900.00,
     "feeCharged": 0.00,
-    "transactionTime": "2024-05-12T13:26:13Z",
+    "transacti": "2024-05-12T13:26:13Z",
     "rawSmsBody": "Your payment of 10,900 RWF to Jane Smith...",
     "category": {
       "categoryId": 2,
-      "categoryName": "Payment",
+      "ryName": "Payment",
       "categoryDescription": "Outgoing payments for goods/services"
     },
     "sender": {

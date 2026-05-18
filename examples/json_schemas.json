@@ -1,0 +1,110 @@
+[
+  {
+    "transaction_id": "76662021700",
+    "amount": 2000.00,
+    "feeCharged": 0.00,
+    "transactionTime": "2024-05-10T16:30:51Z",
+    "rawSmsBody": "You have received 2000RWF from Jane Smith...",
+    "category": {
+      "categoryId": 1,
+      "categoryName": "Money Received",
+      "categoryDescription": "Incoming P2P transfers"
+    },
+    "sender": {
+      "userId": 2,
+      "userFullName": "Jane Smith",
+      "phoneNumber": "+250788******013"
+    },
+    "receiver": {
+      "userId": 1,
+      "userFullName": "System Owner",
+      "phoneNumber": "+250788110381"
+    },
+    "systemLog": {
+      "serviceCenter": "+250788110381",
+      "protocolType": 0,
+      "statusCode": -1
+    }
+  },
+  {
+    "transaction_id": "73214484437",
+    "amount": 1000.00,
+    "feeCharged": 0.00,
+    "transactionTime": "2024-05-10T16:31:39Z",
+    "rawSmsBody": "TxId: 73214484437. Your payment of 1,000 RWF to Jane Smith...",
+    "category": {
+      "categoryId": 2,
+      "categoryName": "Payment",
+      "categoryDescription": "Outgoing payments for goods/services"
+    },
+    "sender": {
+      "userId": 1,
+      "userFullName": "System Owner",
+      "phoneNumber": "+250788110381"
+    },
+    "receiver": {
+      "userId": 2,
+      "userFullName": "Jane Smith",
+      "phoneNumber": "+250788******013"
+    },
+    "systemLog": {
+      "serviceCenter": "+250788110381",
+      "protocolType": 0,
+      "statusCode": -1
+    }
+  }
+]
+ {
+    "transaction_id": "250795963036",
+    "amount": 40000.00,
+    "feeCharged": 0.00,
+    "transactionTime": "2024-05-11T18:43:49Z",
+    "rawSmsBody": "A bank deposit of 40000 RWF has been added...",
+    "category": {
+      "categoryId": 3,
+      "categoryName": "Bank Deposit",
+      "categoryDescription": "Transfers from Bank to MoMo"
+    },
+    "sender": {
+      "userId": null,
+      "userFullName": null,
+      "phoneNumber": null
+    },
+    "receiver": {
+      "userId": 1,
+      "userFullName": "System Owner",
+      "phoneNumber": "+250788110381"
+    },
+    "systemLog": {
+      "serviceCenter": "+250788110381",
+      "protocolType": 0,
+      "statusCode": -1
+    }
+  },
+  {
+    "transaction_id": "1715454249531",
+    "amount": 10000.00,
+    "feeCharged": 100.00,
+    "transactionTime": "2024-05-11T20:34:47Z",
+    "rawSmsBody": "10000 RWF transferred to Samuel Carter. Fee was: 100 RWF",
+    "category": {
+      "categoryId": 5,
+      "categoryName": "Transfer",
+      "categoryDescription": "Direct P2P transfers to other users"
+    },
+    "sender": {
+      "userId": 1,
+      "userFullName": "System Owner",
+      "phoneNumber": "+250788110381"
+    },
+    "receiver": {
+      "userId": 3,
+      "userFullName": "Samuel Carter",
+      "phoneNumber": "+250791666666"
+    },
+    "systemLog": {
+      "serviceCenter": "+250788110381",
+      "protocolType": 0,
+      "statusCode": -1
+    }
+  },

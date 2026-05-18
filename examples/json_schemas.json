@@ -54,3 +54,57 @@
     }
   }
 ]
+ {
+    "transaction_id": "250795963036",
+    "amount": 40000.00,
+    "feeCharged": 0.00,
+    "transactionTime": "2024-05-11T18:43:49Z",
+    "rawSmsBody": "A bank deposit of 40000 RWF has been added...",
+    "category": {
+      "categoryId": 3,
+      "categoryName": "Bank Deposit",
+      "categoryDescription": "Transfers from Bank to MoMo"
+    },
+    "sender": {
+      "userId": null,
+      "userFullName": null,
+      "phoneNumber": null
+    },
+    "receiver": {
+      "userId": 1,
+      "userFullName": "System Owner",
+      "phoneNumber": "+250788110381"
+    },
+    "systemLog": {
+      "serviceCenter": "+250788110381",
+      "protocolType": 0,
+      "statusCode": -1
+    }
+  },
+  {
+    "transaction_id": "1715454249531",
+    "amount": 10000.00,
+    "feeCharged": 100.00,
+    "transactionTime": "2024-05-11T20:34:47Z",
+    "rawSmsBody": "10000 RWF transferred to Samuel Carter. Fee was: 100 RWF",
+    "category": {
+      "categoryId": 5,
+      "categoryName": "Transfer",
+      "categoryDescription": "Direct P2P transfers to other users"
+    },
+    "sender": {
+      "userId": 1,
+      "userFullName": "System Owner",
+      "phoneNumber": "+250788110381"
+    },
+    "receiver": {
+      "userId": 3,
+      "userFullName": "Samuel Carter",
+      "phoneNumber": "+250791666666"
+    },
+    "systemLog": {
+      "serviceCenter": "+250788110381",
+      "protocolType": 0,
+      "statusCode": -1
+    }
+  },

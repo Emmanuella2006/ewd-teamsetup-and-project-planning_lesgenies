@@ -1,0 +1,27 @@
+{
+    "transaction_id": "13913173274",
+    "amount": 2000.00,
+    "feeCharged": 0.00,
+    "transactionTime": "2024-05-12T11:41:28Z",
+    "rawSmsBody": "Your payment of 2000 RWF to Airtime with token...",
+    "category": {
+      "categoryId": 4,
+      "categoryName": "Airtime",
+      "categoryDescription": "Purchase of mobile airtime/bundles"
+    },
+    "sender": {
+      "userId": 1,
+      "userFullName": "System Owner",
+      "phoneNumber": "+250788110381"
+    },
+    "receiver": {
+      "userId": null,
+      "userFullName": null,
+      "phoneNumber": null
+    },
+    "systemLog": {
+      "serviceCenter": "+250788110381",
+      "protocolType": 0,
+      "statusCode": -1
+    }
+  },

@@ -49,6 +49,8 @@ Building on the team setup and project planning, the database design and impleme
 The full ERD is available at docs/erd_diagram.png.
 The diagram was built using Miro and uses crow's foot notation to express cardinality. It clearly marks all primary keys (PK) and foreign keys (FK) across all five entities.
 
+<img width="847" height="724" alt="image" src="https://github.com/user-attachments/assets/4710ba00-ee1c-4fe8-8a51-6876fc90994e" 
+  
 Entities and what they represent:
 
 Users — stores every participant in a transaction, whether as a sender or receiver. Key attributes include user_id (PK), full_name, phone_number, and account_balance.
@@ -58,8 +60,7 @@ User_Permission — a junction table that resolves the many-to-many relationship
 System_Log — tracks every processing event during XML ingestion, recording which service centre handled the transaction, the protocol used, and the status code returned.
 
 Relationships:
-RelationshipCardinalityMeaningUsers → Transactions (sender)1 : ManyOne user can send many transactionsUsers → Transactions (receiver)1 : ManyOne user can receive many transactionsTransaction_Categories → Transactions1 : ManyOne category groups many transactionsUsers ↔ Transaction_CategoriesMany : ManyResolved by the User_Permission junction tableTransactions → System_Log1 : ManyOne transaction can generate multiple log entries
-<img width="847" height="724" alt="image" src="https://github.com/user-attachments/assets/4710ba00-ee1c-4fe8-8a51-6876fc90994e" />
+<img width="1009" height="407" alt="image" src="https://github.com/user-attachments/assets/821e904f-44fe-413b-ba97-5118c2f8487c" />
 
 
 **Database Schema**

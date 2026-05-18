@@ -41,6 +41,7 @@ CREATE TABLE transactions(
     amount DECIMAL(15, 2) DEFAULT 0.00,
     fee_charged DECIMAL(15, 2) DEFAULT 0.00,
     transaction_time DATETIME NOT NULL,
+<<<<<<< HEAD
     raw_sms_body TEXT,
     CONSTRAINT fk_sender FOREIGN KEY (sender_id) REFERENCES users(user_id),
     CONSTRAINT fk_receiver FOREIGN KEY (receiver_id) REFERENCES users(user_id),
@@ -48,6 +49,19 @@ CREATE TABLE transactions(
     CONSTRAINT chk_positive_amount CHECK (amount > 0)
 );
 
+=======
+    raw_sms_body TEXT, --This is going to be the original text message body
+
+
+-- --constrains
+    CONSTRAINT fk_sender FOREIGN KEY (sender_id) REFERENCES users(user_id),
+    CONSTRAINT fk_receiver FOREIGN KEY (receiver_id) REFERENCES users(user_id),
+    CONSTRAINT fk_category FOREIGN KEY (category_id) REFERENCES transaction_categories(category_id),
+--     --Check whether the amount sent is greater than 0
+    CONSTRAINT chk_positive_amount CHECK (amount > 0) 
+);
+-- --Logging table for all the transactions or storing the transaction histories for all the users
+>>>>>>> Add system logs table schema
 CREATE TABLE system_logs (
     log_id INT AUTO_INCREMENT PRIMARY KEY,
     transaction_id VARCHAR(50),
@@ -56,6 +70,7 @@ CREATE TABLE system_logs (
     status_code INT,
     FOREIGN KEY (transaction_id) REFERENCES transactions(transaction_id)
 );
+<<<<<<< HEAD
 
 INSERT INTO transaction_categories(category_name, description) VALUES
 ('Money Received', 'Incoming P2P transfers'),
@@ -85,3 +100,5 @@ INSERT INTO transactions (transaction_id, sender_id, receiver_id, category_id, a
 INSERT INTO system_logs(transaction_id, service_center, protocol_type, status_code) VALUES
 ('76662021700', '+250788110381', 0, -1),
 ('73214484437', '+250788110381', 0, -1);
+=======
+>>>>>>> Add system logs table schema

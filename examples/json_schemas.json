@@ -25,3 +25,31 @@
       "statusCode": -1
     }
   },
+
+{
+    "transaction_id": "24227321992",
+    "amount": 1600.00,
+    "feeCharged": 0.00,
+    "transactionTime": "2024-05-14T21:29:01Z",
+    "rawSmsBody": "Your payment of 1,600 RWF to Linda Green...",
+    "category": {
+      "categoryId": 5,
+      "categoryName": "Transfer",
+      "categoryDescription": "Direct P2P transfers to other users"
+    },
+    "sender": {
+      "userId": 1,
+      "userFullName": "System Owner",
+      "phoneNumber": "+250788110381"
+    },
+    "receiver": {
+      "userId": 5,
+      "userFullName": "Linda Green",
+      "phoneNumber": "+250788954321"
+    },
+    "systemLog": {
+      "serviceCenter": "+250788110381",
+      "protocolType": 0,
+      "statusCode": -1
+    }
+  },

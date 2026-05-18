@@ -134,7 +134,12 @@
       "statusCode": -1
     }
   },
+<<<<<<< HEAD
   {
+=======
+
+{
+>>>>>>> Add transfer transaction JSON example
     "transaction_id": "24227321992",
     "amount": 1600.00,
     "feeCharged": 0.00,
@@ -161,6 +166,7 @@
       "statusCode": -1
     }
   },
+<<<<<<< HEAD
   {
     "tran_id": "45434420466",
     "amount": 10900.00,
@@ -189,3 +195,5 @@
     }
   }
 ]
+=======
+>>>>>>> Add transfer transaction JSON example

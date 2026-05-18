@@ -39,7 +39,8 @@ https://github.com/users/Emmanuella2006/projects/2/views/1
 
 ## Architecture Diagram
 This is the link to our architecture diagram; https://miro.com/app/board/uXjVHVg6t7c=/
-<img width="1780" height="865" alt="image" src="https://github.com/user-attachments/assets/737d3bae-a5c0-444d-ae57-3d06a6dfb418" />
+<img width="807" height="708" alt="image" src="https://github.com/user-attachments/assets/fe486eaf-8c70-48a3-b60d-125233774387" />
+
 
 **Database Desig and implementationn**
 Database Overview
@@ -53,11 +54,15 @@ The diagram was built using Miro and uses crow's foot notation to express cardin
   
 Entities and what they represent:
 
-Users — stores every participant in a transaction, whether as a sender or receiver. Key attributes include user_id (PK), full_name, phone_number, and account_balance.
-Transactions — the central table of the schema. Links senders and receivers from the Users table, assigns a category, and stores the amount, fee, timestamp, and the original raw SMS body for auditing.
-Transaction_Categories — a lookup table for transaction types such as Money Received, Payment, Bank Deposit, Airtime, and Transfer. Keeping categories in a separate table means new types can be added without touching the core schema.
-User_Permission — a junction table that resolves the many-to-many relationship between Users and Transaction_Categories. It uses a composite primary key (user_id + category_id) and a boolean is_allowed flag to control which transaction types each user can perform.
-System_Log — tracks every processing event during XML ingestion, recording which service centre handled the transaction, the protocol used, and the status code returned.
+Users:stores every participant in a transaction, whether as a sender or receiver. Key attributes include user_id (PK), full_name, phone_number, and account_balance.
+
+Transactions:the central table of the schema. Links senders and receivers from the Users table, assigns a category, and stores the amount, fee, timestamp, and the original raw SMS body for auditing.
+
+Transaction_Categories:a lookup table for transaction types such as Money Received, Payment, Bank Deposit, Airtime, and Transfer. Keeping categories in a separate table means new types can be added without touching the core schema.
+
+User_Permission:a junction table that resolves the many-to-many relationship between Users and Transaction_Categories. It uses a composite primary key (user_id + category_id) and a boolean is_allowed flag to control which transaction types each user can perform.
+
+System_Log:tracks every processing event during XML ingestion, recording which service centre handled the transaction, the protocol used, and the status code returned.
 
 Relationships:
 <img width="1009" height="407" alt="image" src="https://github.com/user-attachments/assets/821e904f-44fe-413b-ba97-5118c2f8487c" />

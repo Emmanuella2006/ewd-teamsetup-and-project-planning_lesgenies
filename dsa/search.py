@@ -36,3 +36,13 @@ def parse_xml(filepath):
         transactions.append(record)
     return transactions
 
+# step 2: I then implemented linear search logic
+
+def linear_search(transactions, target_id):
+    # I will be looping through every transaction one by one
+    # and returning matching record, or none if not found
+
+    for transaction in transactions:
+        if transaction["id"] == target_id:
+            return transaction
+    return None

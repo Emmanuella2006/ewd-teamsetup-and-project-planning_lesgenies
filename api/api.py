@@ -1,4 +1,4 @@
-# Build the http.server skeleton, implementing GET /transactions and GET /transactions/{id},implementing POST /transactions
+# Building the http.server skeleton, implementing GET /transactions and GET /transactions/{id},implementing POST /transactions
 
 import http.server
 import socketserver

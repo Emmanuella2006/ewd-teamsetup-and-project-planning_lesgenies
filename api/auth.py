@@ -4,7 +4,7 @@ import base64
 import re
 
 DATA_STORE = [
-    {"id": "1", "type": "payment", "amount": 500.0, "sender": "Alice", "receiver": "Bob", "timestamp": "2026-05-27T12:00:00Z"}
+    {"id": "1", "type": "Money Received", "amount": 2000.00, "sender": "Jane Smith", "receiver": "Service Owner", "timestamp": "2024-05-10 16:30:51"}
 ]
 # For fast lookup
 DICTIONARY_STORE = {item["id"]: item for item in DATA_STORE}

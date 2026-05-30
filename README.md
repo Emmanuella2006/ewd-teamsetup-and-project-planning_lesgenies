@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ## Project Description
 A fullstack application that processes MoMo SMS data in XML format, 
 cleans and categorizes it, stores it in a relational database, and 
@@ -114,3 +112,27 @@ The full setup script is at database/database_setup.sql. It includes DDL stateme
 
 **JSON Examples**
 JSON schemas for all entities are at examples/json_schemas.json, showing how relational data is serialized for API responses.
+
+
+THE BASIC AUTHENTICATION FUNCTIONALITY
+ - The basic authentication helps protect the protected resources and requires a username and password to access.
+ - When the user access the resource without a password, the server challenges the client with status_code 401 Unauthorised
+ - The password and username are either saved in the database or hardcoded. When the user inputs the password to login, The username is combined with the password using a semicolon and is encoded into  base64 format.
+ - When the user sends a new request containing the Authorisation header, it checks whether the header Authorisation starts with "Basic". It then decodes it and checks whether it matches to the saved password and username.
+ - If the password and the username matches, a response is provided with the requested data, else, it returns an error paage with status code 401. Therefore anyone packet-sniffing an unencrypted http network, they can easily copy the base64 string and decode it back to plain text and get the username and password in seconds.
+
+ - No expiration - Basic authentication credentials do not expoire normally unless you chanhge the password yourself which makes it even more susceptible to interceptions.
+
+ - Username and password entry with every single request - This is where the user is expected to send the username and password every time they make a request which makes it prone to interception by malicious individuals. Once one request is intercepted, the username and password is obtained through the base64 string which is later decoded and this compromises the system.
+
+
+STRONGER AUTHENTICATION ALTERNATIVES:
+JWT (JSON Web Tokens) - This is where the user logs in once and the server generates a signed, time-locked tocken which the clienf can send this token instead of username and password for all future requests.
+
+ - The token expires automatically - such as the github classic tokens
+ - Contains custom permissions by the user
+ - The server doesn't need to check the database every single time a request is made.
+
+OAuth 2.0 - This is a token-exchange frameworks that delegates authentication to a dedicated provider such as Google, AuthO
+ - This ensures that the app never interacts with the user's actual password meaning more security for the users credentials even in cases of app's security risks
+ - Supports features such as the multi-factor authentication(MFA) and granulaar API scopes

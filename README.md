@@ -37,11 +37,6 @@ visualizes it through a frontend dashboard.
 ## Scrum Board;
 https://github.com/users/Emmanuella2006/projects/2/views/1
 
-## Architecture Diagram
-This is the link to our architecture diagram; https://miro.com/app/board/uXjVHVg6t7c=/
-<img width="1418" height="702" alt="image" src="https://github.com/user-attachments/assets/11edecbf-ffa3-4190-b431-b34543878b5b" />
-
->>>>>>> 940069952a15e4b72ad430402fd4d51e08e26e71
 Database Design
 
 Database Overview

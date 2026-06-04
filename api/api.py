@@ -151,6 +151,65 @@ class MoMoRequestHandler(http.server.BaseHTTPRequestHandler):
 
         self._send_json_response(404, {"error": "Endpoint not found"})
 
+    def do_PUT(self):
+ 
+        # Auth check
+        if not check_auth(self.headers):
+            self._send_json_response(401, {"error": "Unauthorized. Please provide valid credentials."})
+            return
+ 
+        # Endpoint: PUT /transactions/{id}
+        parsed_path = urllib.parse.urlparse(self.path)
+        path_parts = parsed_path.path.strip('/').split('/')
+ 
+        if len(path_parts) == 2 and path_parts[0] == 'transactions':
+            transaction_id = path_parts[1]
+            transactions = self._load_transactions()
+ 
+            for i, t in enumerate(transactions):
+                if str(t.get('id')) == str(transaction_id):
+                    content_length = int(self.headers['Content-Length'])
+                    body = self.rfile.read(content_length)
+                    updated_data = json.loads(body.decode('utf-8'))
+                    transactions[i].update(updated_data)
+                    self._save_transactions(transactions)
+                    self._send_json_response(200, transactions[i])
+                    return
+ 
+            self._send_json_response(404, {"error": "Transaction not found"})
+            return
+ 
+        self._send_json_response(404, {"error": "Endpoint not found"})
+ 
+    def do_DELETE(self):
+ 
+        # Auth check
+        if not check_auth(self.headers):
+            self._send_json_response(401, {"error": "Unauthorized. Please provide valid credentials."})
+            return
+ 
+        # Endpoint: DELETE /transactions/{id}
+        parsed_path = urllib.parse.urlparse(self.path)
+        path_parts = parsed_path.path.strip('/').split('/')
+ 
+        if len(path_parts) == 2 and path_parts[0] == 'transactions':
+            transaction_id = path_parts[1]
+            transactions = self._load_transactions()
+ 
+            new_transactions = [t for t in transactions if str(t.get('id')) != str(transaction_id)]
+ 
+            if len(new_transactions) == len(transactions):
+                self._send_json_response(404, {"error": "Transaction not found"})
+                return
+ 
+            self._save_transactions(new_transactions)
+            self._send_json_response(200, {"message": "Transaction deleted successfully"})
+            return
+ 
+        self._send_json_response(404, {"error": "Endpoint not found"})
+
+
+
 
 # Start the server
 def run_server():
